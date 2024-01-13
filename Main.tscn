@@ -12,10 +12,10 @@ Note_scene = ExtResource( 4 )
 CameraPath = NodePath("Camera")
 
 [node name="TextEdit" type="TextEdit" parent="."]
-margin_left = -683.0
-margin_top = 8.0
-margin_right = -347.0
-margin_bottom = 271.0
+margin_left = -2831.0
+margin_top = -2595.0
+margin_right = -2495.0
+margin_bottom = -2332.0
 text = "TODO list:
 
 > Arreglos pendientes:
@@ -43,14 +43,13 @@ texture = ExtResource( 1 )
 modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -151.0
-margin_top = -150.0
-margin_right = -143.0
-margin_bottom = -143.0
+margin_left = -165.25
+margin_top = -149.125
+margin_right = -157.25
+margin_bottom = -142.125
 script = ExtResource( 5 )
 
 [node name="Camera" parent="." instance=ExtResource( 2 )]
-position = Vector2( -24, 19 )
 z_index = 3
 
 [node name="NewNote" type="Button" parent="Camera"]
@@ -62,12 +61,15 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 text = "Create new note"
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="BorderBody" type="StaticBody2D" parent="."]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="BorderCollision" type="CollisionPolygon2D" parent="BorderBody"]
 position = Vector2( -47.4999, 30.5001 )
 scale = Vector2( 130.469, 130.219 )
 polygon = PoolVector2Array( -10, -10, -10, 10, 10, 10, 10, -10, -9, -10, -9, -9, 9, -9, 9, 9, -9, 9, -9, -8 )
+
+[node name="NoteForGroup" parent="." instance=ExtResource( 4 )]
+position = Vector2( -3000, -2500 )
 
 [connection signal="LoseNoteFocus" from="." to="Grid/Background" method="_on_Main_LoseNoteFocus"]
 [connection signal="gui_input" from="Grid/Background" to="Grid/Background" method="_on_Background_gui_input"]

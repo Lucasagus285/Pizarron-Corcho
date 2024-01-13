@@ -3,7 +3,7 @@
 [ext_resource path="res://assets/Note.jpg" type="Texture" id=1]
 [ext_resource path="res://Note.gd" type="Script" id=2]
 
-[node name="Note" type="KinematicBody2D"]
+[node name="Note" type="KinematicBody2D" groups=["notesGroup"]]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
