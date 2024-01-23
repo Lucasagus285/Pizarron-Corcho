@@ -9,3 +9,4 @@ func _on_Background_gui_input(event):
 
 func _on_Main_LoseNoteFocus():
 	grab_focus()
+

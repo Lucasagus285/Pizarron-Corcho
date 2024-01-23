@@ -1,16 +1,13 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Note.tscn" type="PackedScene" id=1]
-[ext_resource path="res://TestLine.gd" type="Script" id=2]
+[ext_resource path="res://TestTest.gd" type="Script" id=3]
 
-[node name="Test" type="Node"]
+[node name="Test" type="Node" groups=["notesGroup"]]
+script = ExtResource( 3 )
 
 [node name="Note" parent="." instance=ExtResource( 1 )]
 position = Vector2( 220, 60 )
-
-[node name="TestLine" type="Line2D" parent="Note"]
-default_color = Color( 0.886275, 0.105882, 0, 1 )
-script = ExtResource( 2 )
 
 [node name="Note2" parent="." instance=ExtResource( 1 )]
 position = Vector2( 674, 118 )

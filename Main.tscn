@@ -6,7 +6,7 @@
 [ext_resource path="res://Note.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Background.gd" type="Script" id=5]
 
-[node name="Main" type="Node"]
+[node name="Main" type="Node" groups=["notesGroup"]]
 script = ExtResource( 3 )
 Note_scene = ExtResource( 4 )
 CameraPath = NodePath("Camera")
